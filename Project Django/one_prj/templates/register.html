@@ -1,0 +1,90 @@
+{% extends 'Base.html' %}
+
+{% block title %}Registeration{% endblock %}
+
+{% block style %}
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #e9ecef;
+        }
+
+        .in_form{
+            margin-right: 10%;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <center><h3>حساب کاربری خود را بسازید.</h3></center><br><br><br>
+    <section class="hero is-dark is-fullheight">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-5-tablet is-4-desctop is-3-widescreen">
+                        <center>
+                            <form action="." method="post" class="box">
+                                {% csrf_token %}
+                                <div class="field">
+                                    <label for="" class="label">نام کاربری</label>
+                                    <div class="control has-icons-left">
+                                        {{form.username}}
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+            
+                                <div class="field">
+                                    <label for="" class="label">ایمیل</label>
+                                    <div class="control has-icons-left">
+                                        {{form.email}}
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+            
+                                <div class="field">
+                                    <label for="" class="label">رمز</label>
+                                    <div class="control has-icons-left">
+                                        {{form.password}}
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                    </div>
+                                </div><br>
+            
+                                <div class="field">
+                                    <button class="button is-success" type="submit">
+                                        ثبت نام
+                                    </button>
+                                </div>
+                            </form>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

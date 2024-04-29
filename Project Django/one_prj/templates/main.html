@@ -1,0 +1,189 @@
+{% extends 'Base.html' %}
+
+{% block title %}home{% endblock %}
+
+{% block style %}
+    <style>
+        html, body{
+    padding: 0;
+    margin: 0;
+    background-color: #e9ecef;
+}
+
+.header{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 160px;
+    background-image: linear-gradient(#8E2DE2, #4A00E0);
+}
+
+.navigation_bar{
+    height: 60px;
+    padding-top: 1.5%;
+}
+
+.nav_items{
+    padding-left: 10%;
+    margin-right: 3%;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+.container_1{
+    display: grid;
+    grid-template-areas: 
+    "a a a a b b b b c c c c "
+    "a a a a b b b b c c c c "
+    "a a a a b b b b c c c c "
+    ;
+}
+
+.course_4{
+    grid-area: a;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 0 6px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightblue;
+}
+
+.course_5{
+    grid-area: b;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 0 6px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightblue;
+}
+
+.course_6{
+    grid-area: c;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 0 6px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightblue;
+}
+
+.course_1{
+    grid-area: a;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 0 6px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightblue;
+    width: 97.5%;
+    text-decoration: none;
+}
+
+.img_div{
+    width: 100%;
+}
+
+.img_1{
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.course_2{
+    grid-area: b;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 0 6px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightblue;
+    width: 97.5%;
+    text-decoration: none;
+}
+
+.img_2{
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.span_1{
+    color: black;
+}
+
+.course_3{
+    grid-area: c;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 0 6px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px lightblue;
+    width: 97.5%;
+    text-decoration: none;
+}
+
+.img_3{
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.footer{
+    width: 100%;
+    height: 160px;
+    background-image: linear-gradient(#4e54c8, #8f94fb);
+    margin-top: 3%;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: white;
+}
+
+.footer_li{
+    padding-top: 1%;
+}
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="header">
+    <center><h3 style="color: white; padding-top: 60px;">کد نویسی رو با ما شروع کن!</h3></center>
+</div>
+<nav dir="rtl" class="navigation_bar">
+    <span style="padding-left: 10%;"><b style="font-size: 20px;">دوره ها</b></span>
+    <a class="nav_items" href="#">بوت کمپ ها</a>
+    <a class="nav_items" href="#">مقالات</a>
+    <a class="nav_items" href="#">نقشه راه</a>
+    <a href="{% url 'user_register' %}" style="width: 16px; text-decoration: none; color: black;">
+        <div style="display: inline; width: 60px; height: 20px;">
+            ثبت نام
+        </div>
+    </a>
+    <span>/</span>
+    <a href="{% url 'login' %}" style="width: 16px; text-decoration: none; color: black;">
+        <div style="display: inline;  width: 60px; height: 20px;;">
+            ورود
+        </div>
+    </a>
+</nav><hr style="color:dimgrey;"><br>
+<h2>دوره های درحال ضبظ</h2><br><br>
+<div class="container_1">
+    <a href="{% url 'login' %}" class="course_4" style="text-decoration: none;"><center><div><p style="font-size: 40px; padding-top: 26%;">در حال ضبط!</p></div></center></a>
+    <a href="{% url 'login' %}" class="course_5" style="text-decoration: none;"><center><div><p style="font-size: 40px; padding-top: 26%;">در حال ضبط!</p></div></center></a>
+    <a href="{% url 'login' %}" class="course_6" style="text-decoration: none;"><center><div><p style="font-size: 40px; padding-top: 26%;">در حال ضبط!</p></div></center></a>
+</div>
+<br><hr><br>
+<h2>دوره های ضبط شده</h2><br><br>
+<div class="container_1">
+    <a href="{% url 'login' %}" class="course_1"><div class="img_div"><img src="../media/pic/6/919038_3ae1_13.jpg" class="img_1"></div><span class="span_1" style="font-size: 20px;">دوره پایتون</span></a>
+    <a href="{% url 'login' %}" class="course_2"><div class="img_div"><img src="../media/pic/6/wp12510353.jpg" class="img_2"></div><span class="span_1" style="font-size: 20px;">دوره مقدماتی جنگو</span></a>
+    <a href="{% url 'login' %}" class="course_3"><div class="img_div"><img src="../media/pic/6/1520086554238.jpg" class="img_3"></div><span class="span_1" style="font-size: 20px;">دوره کتابخانه requests</span></a>
+</div>
+<footer class="footer">
+    <ul>
+        <li class="footer_li"><a href="#" class="footer_link">تماس با ما</a></li>
+        <li class="footer_li"><a href="#" class="footer_link">در باره ما</a></li>
+        <li class="footer_li"><a href="#" class="footer_link">درباره دوره ها</a></li>
+        <li class="footer_li"><a href="#" class="footer_link">مجوز ها</a></li>
+    </ul>
+</footer>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'Base.html' %}
+
+{% block title %}python course{% endblock %}
+
+{% block style %}
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <center><h1>دوره آموزش پایتون</h1></center><br><br><br>
+    <div class="container">
+        {% for item in video_1 %}
+            <div style="border: 3px solid; border-radius: 10px;">
+                <center><h3>{{item.caption1}}</h3></center><br><br><br>
+                <center>
+                    <video controls="controls" style="width: 600px;">
+                        <source src="{{item.video1.url}}" type="video/mp4">
+                    </video><br><br><br>
+                </center>
+            </div><br><hr style="color: black;"><br>
+        {% endfor %}
+    </div><br><br>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

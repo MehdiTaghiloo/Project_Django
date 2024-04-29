@@ -1,0 +1,10 @@
+{% extends 'Base.html' %}
+
+
+{% block content %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'Base.html' %}
+
+{% block title %}django course{% endblock %}
+
+{% block style %}
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <center><h1>دوره آموزش جنگو</h1></center><br><br><br>
+    <div class="container">
+        {% for item in video_2 %}
+            <div style="border: 3px solid; border-radius: 10px;">
+                <center><h3>{{item.caption2}}</h3></center><br><br><br>
+                <center>
+                    <video controls="controls" style="width: 600px;">
+                        <source src="{{item.video2.url}}" type="video/mp4">
+                    </video><br><br><br>
+                </center>
+            </div><br><hr style="color: black;"><br>
+        {% endfor %}
+    </div><br><br>
+{% endblock %}
